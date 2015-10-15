@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+	<head>
+		<meta charset="UTF-8">
+		<title>2- AngularJS Diretivas</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	</head>
+	<body ng-app="">
+	A diretiva ng-model vincula os controles Html(input, select, textarea) para a plicação de dados
+	<div ng-init="nome='Danilo'">
+		<P>Nome : <input type="text" ng-model="nome"></P>
+		<p>Você escreveu: {{nome}}</p>
+	</div>
+	</body>
+</html>

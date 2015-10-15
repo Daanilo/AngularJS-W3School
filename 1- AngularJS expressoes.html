@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Espressões</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app="">
+<!-- A expressão só é realizada se manter a diretiva ng-app-->
+	<p>Minha primeira expressão 2+2 = {{2+2}}</p>
+<!-- Os numeros do Angularjs são como os numeros no JavaSCRIPT-->
+	<div ng-init="quantidade=2; custo=5">
+		<P>Total em Reais: R${{quantidade * custo}},00</P>
+	</div>
+<!-- Utilizando ng-bind-->
+	<div ng-init="quantidade=2; custo=5">
+		<P>Total em Reais: R$<span ng-bind="quantidade * custo"></span>,00</P>
+	</div>
+	<!-- Concatenado strings-->
+	<div ng-init="nome='Danilo'; sobrenome='Freitas'">
+		<P>O nome é : {{nome + " de " + sobrenome}}</P>
+		<P>O nome é : <span ng-bind="nome + ' de ' + sobrenome"></span></P>
+	</div>
+<!-- Objetos no AngularJS-->
+	<div ng-init="pessoa={nome:'Danilo', sobrenome:'Freitas'}">
+		<P>O nome é : {{pessoa.sobrenome}}</P>
+		<P>O nome é : <span ng-bind="pessoa.sobrenome"></span></P>
+	</div>
+<!-- Arrays AngularJS-->
+	<div ng-init="pontos=[1,15,19,2,40]">
+		<P>O terceiro resultado é : {{pontos[2]}}</P>
+		<P>O quinto resultado é : <span ng-bind="pontos[4]"></span></P>
+	</div>
+</body>
+</html>
